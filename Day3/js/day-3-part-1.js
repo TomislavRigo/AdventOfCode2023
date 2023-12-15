@@ -5,9 +5,7 @@ const fs = require('node:fs');
  * @param {string} schematic 
  */
 const getSchematicSum = function (schematic) {
-
-const schematicLines = schematic.split('\r\n').filter(x => x.length > 0);  // Array of strings, think 2d array of characters
-
+    const schematicLines = schematic.trim().split('\r\n'); // Array of strings, think 2d array of characters
     const numberCoordinates = [];
     let currentNumber = [];
 
